@@ -40,7 +40,7 @@ const HomeScreen = () => {
       </View>
       {/*Body*/}
       <View className="flex-row items-center space-x-2 pb-2 px-2">
-        <View className="flex-row rounded-lg flex-1 space-x-2 bg-gray-200 p-3">
+        <View className="flex-row rounded-md flex-1 space-x-2 bg-gray-200 p-3">
           <SearchIcon color="gray" size={25} />
           <TextInput
             placeholder="Restaurants and Cuisines"
