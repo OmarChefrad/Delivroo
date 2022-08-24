@@ -26,11 +26,23 @@ const Categories = () => {
       />
       <CategorieCard
         imgUrl="https://links.papareact.com/gn7"
-        title="testing 3"
+        title="testing 4"
       />
       <CategorieCard
         imgUrl="https://links.papareact.com/gn7"
-        title="testing 3"
+        title="testing 5"
+      />
+      <CategorieCard
+        imgUrl="https://links.papareact.com/gn7"
+        title="testing 6"
+      />
+      <CategorieCard
+        imgUrl="https://links.papareact.com/gn7"
+        title="testing 7"
+      />
+      <CategorieCard
+        imgUrl="https://links.papareact.com/gn7"
+        title="testing 8"
       />
     </ScrollView>
   )
