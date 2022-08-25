@@ -14,7 +14,7 @@ export default {
       type: "string",
       title: "Short description",
       validation: (Rule) => Rule.max(200),
-    },
+    }, 
     {
       name: "image",
       type: "image",
