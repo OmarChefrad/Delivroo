@@ -1,11 +1,14 @@
 {
   "expo": {
-    "name": "my-tailwind-native-app",
-    "slug": "my-tailwind-native-app",
-    "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "name": "delivroo",
+    "slug": "delivroo",
+    "version": "12.16",
+    "assetBundlePatterns": ["**/*"]
   },
-  "name": "my-tailwind-native-app"
+  "splash": {
+    "image": "./assets/delivrooLogo.png",
+    "resizeMode": "contain",
+    "backgroundColor": "#000000"
+  },
+  "name": "delivroo"
 }
