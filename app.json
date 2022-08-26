@@ -3,6 +3,7 @@
     "name": "delivroo",
     "slug": "delivroo",
     "version": "12.16",
+    "icon": "./assets/delivrooLogo.png",
     "assetBundlePatterns": ["**/*"]
   },
   "splash": {
