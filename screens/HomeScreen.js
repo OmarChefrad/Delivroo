@@ -22,22 +22,22 @@ const HomeScreen = () => {
     })
   }, [])
 
-  useEffect(() => {
-    sanityClient.fetch(
-        `
-        *[_type == "featured"] {
-              ...,
-            restaurants[]->{
-              ...,
-              dishes[]->
-            }
-          }
-        `
-      )
-      .then((data) => {
-        setFeaturedCategories(data)
-      })
-  }, [])
+  // useEffect(() => {
+  //   sanityClient.fetch(
+  //       `
+  //       *[_type == "featured"] {
+  //             ...,
+  //           restaurants[]->{
+  //             ...,
+  //             dishes[]->
+  //           }
+  //         }
+  //       `
+  //     )
+  //     .then((data) => {
+  //       setFeaturedCategories(data)
+  //     })
+  // }, [])
 
   console.log(featuredCategories)
 
