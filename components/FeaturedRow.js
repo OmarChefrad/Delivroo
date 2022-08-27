@@ -1,10 +1,35 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { View, Text } from "react-native"
 import { ArrowRightIcon } from "react-native-heroicons/outline"
 import { ScrollView } from "react-native"
 import RestaurantCard from "./RestaurantCard"
+import sanityClient from "../sanity"
 
 const FeaturedRow = ({ id, title, description }) => {
+  const [restaurants, setRestaurants] = useState([])
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `
+      *[_type == "featured" && _id == $id] {
+          ...,
+          restaurants[]->{
+            ...,
+          dishes[]->,
+            type-> {
+            name
+          }
+        },
+      }[0]
+    `,
+        { id }
+      )
+      .then((data) => {
+        setRestaurants(data?.restaurants)
+      })
+  }, [id])
+
   return (
     <View>
       <View className="mt-4 flex-row items-center justify-between px-4">
@@ -20,55 +45,22 @@ const FeaturedRow = ({ id, title, description }) => {
         showsHorizontalScrollIndicator={false}
         className="pt-4"
       >
+        {restaurants?.map((restaurants) => (
+          <RestaurantCard
+            key={restaurants._id}
+            id={restaurants._id}
+            imgUrl={restaurants.image}
+            title={restaurants.name}
+            rating={restaurants.rating}
+            genre={restaurants.type?.name}
+            adress={restaurants.address}
+            short_description={restaurants.short_description}
+            dishes={restaurants.dishes}
+            long={restaurants.long}
+            lat={restaurants.lat}
+          />
+        ))}
         {/*ResCARD*/}
-        <RestaurantCard
-          id="123"
-          imgUrl="https://links.papareact.com/gn7"
-          title="Yo Pizza!"
-          rating={4.5}
-          genre="Italian"
-          adress="123 Main St"
-          short_description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          dishes={[]}
-          long={20}
-          lat={0}
-        />
-        <RestaurantCard
-          id="123"
-          imgUrl="https://links.papareact.com/gn7"
-          title="Yo Pizza!"
-          rating={4.5}
-          genre="Italian"
-          adress="123 Main St"
-          short_description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          dishes={[]}
-          long={20}
-          lat={0}
-        />
-        <RestaurantCard
-          id="123"
-          imgUrl="https://links.papareact.com/gn7"
-          title="Yo Pizza!"
-          rating={4.5}
-          genre="Italian"
-          adress="123 Main St"
-          short_description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          dishes={[]}
-          long={20}
-          lat={0}
-        />
-        <RestaurantCard
-          id="123"
-          imgUrl="https://links.papareact.com/gn7"
-          title="Yo Pizza!"
-          rating={4.5}
-          genre="Italian"
-          adress="123 Main St"
-          short_description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          dishes={[]}
-          long={20}
-          lat={0}
-        />
       </ScrollView>
     </View>
   )
