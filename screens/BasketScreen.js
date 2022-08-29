@@ -46,9 +46,9 @@ const BasketScreen = () => {
 
           <TouchableOpacity
             onPress={navigation.goBack}
-            className="rounded-full bg-gray-100 absolute top-3 right-5"
+            className="rounded-full bg-gray-100 absolute top-7 right-5 "
           >
-            <XCircleIcon color="#00CCBB" height={50} width={50} />
+            <XCircleIcon color="#00CCBB" height={40} width={40} />
           </TouchableOpacity>
         </View>
 
@@ -59,7 +59,7 @@ const BasketScreen = () => {
               uri: "http://links.papareact.com/wru",
             }}
           />
-          <Text className="flex-1">Deliver in 50min</Text>
+          <Text className="flex-1">Delivery in 50min</Text>
           <TouchableOpacity>
             <Text className="text-[#00CCBB]">Change</Text>
           </TouchableOpacity>
