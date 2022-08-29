@@ -2,14 +2,16 @@
   "expo": {
     "name": "delivroo",
     "slug": "delivroo",
-    "version": "12.16",
+    "privacy": "public",
+    "description": "delivro is a native app that can provide a huge value to the restaurant market",
     "icon": "./assets/icon.png",
+    "version": "1.16",
     "assetBundlePatterns": ["**/*"]
   },
   "splash": {
     "image": "./assets/delivrooLogo.png",
     "resizeMode": "contain",
-    "backgroundColor": "#000000"
+    "backgroundColor": "#00CCBB"
   },
   "name": "delivroo"
 }
