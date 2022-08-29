@@ -14,11 +14,10 @@ const BasketIcon = () => {
   if (items.length === 0) {
     return null
   } else {
-    
   }
 
   return (
-    <View className="absolute bottom-10 w-full z-50">
+    <View className="absolute bottom-10 w-full z-50 shadow-2xl">
       <TouchableOpacity
         onPress={() => navigation.navigate("Basket")}
         className="mx-5 p-4 rounded-lg flex-row bg-[#00CCBB] items-center space-x-1"
