@@ -7,13 +7,14 @@ buid using react native-expo  platform
 
 clone the repo and run `npx expo start`
 ---
-![preview](https://cdn.discordapp.com/attachments/1013811635397333062/1013813026308247593/IMG_3124.PNG)
+<img src="https://cdn.discordapp.com/attachments/1013811635397333062/1013813026308247593/IMG_3124.PNG" width="375" height="667" />
 ---
-![preview](https://cdn.discordapp.com/attachments/1013811635397333062/1013813072730791947/IMG_3125.PNG)
+<img src="https://cdn.discordapp.com/attachments/1013811635397333062/1013813072730791947/IMG_3125.PNG" width="375" height="667" />
 ---
-![preview](https://cdn.discordapp.com/attachments/1013811635397333062/1013813119119798322/IMG_3126.PNG)
+<img src="https://cdn.discordapp.com/attachments/1013811635397333062/1013813119119798322/IMG_3126.PNG" width="375" height="667" />
 ---
-![preview](https://cdn.discordapp.com/attachments/1013811635397333062/1013813137889304656/IMG_3127.PNG)
+
+<img src="https://cdn.discordapp.com/attachments/1013811635397333062/1013813137889304656/IMG_3127.PNG" width="375" height="667" />
 ---
-![preview](https://cdn.discordapp.com/attachments/1013811635397333062/1013813188342591579/IMG_3128.PNG)
+<img src="https://cdn.discordapp.com/attachments/1013811635397333062/1013813188342591579/IMG_3128.PNG" width="375" height="667" />
 ---
